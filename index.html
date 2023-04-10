@@ -2,8 +2,7 @@
 <html>
 
 <head>
-  <link rel="shortcut icon" href="favicon.ico">
-  <title>随机抽取系统</title>
+  <title>抽奖系统</title>
   <style>
     body {
       text-align: center;
@@ -71,7 +70,7 @@
   <button onclick="reset()" id="reset">重置</button>
   <!-- HTML 结构 -->
   <div class="input-group">
-    <label for="result">已被抽取过的：</label>
+    <label for="result" id="used">已被抽取过的：0/0</label>
     <textarea id="result" rows="10" cols="30" class="history" placeholder="打过了的号"></textarea>
   </div>
 
