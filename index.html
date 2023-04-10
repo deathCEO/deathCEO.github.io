@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>抽奖系统</title>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-top: 50px;
+    }
+
+    input {
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+
+    .result {
+      margin-top: 50px;
+      font-size: 24px;
+    }
+
+    textarea {
+      margin-top: 50px;
+    }
+
+    .history::placeholder {
+      color: gray;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    .input-group label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .input-group textarea {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>随机抽取系统</h1>
+  <label for="input">候选项：（每个选项之间空格间隔）</label><br />
+  <input type="text" id="input" placeholder="不填则为默认全职业" /><br /><br />
+  <button onclick="start()" id="startBtn">开始</button>
+  <button onclick="stop()" id="stopBtn">停止</button>
+  <button onclick="reset()" id="reset">重置</button>
+  <!-- HTML 结构 -->
+  <div class="input-group">
+    <label for="result">已被抽取过的：</label>
+    <textarea id="result" rows="10" cols="30" class="history" placeholder="打过了的号"></textarea>
+  </div>
+
+  <div class="result"></div>
+  <script src="./localforage.min.js"></script>
+  <script src="./app.js"></script>
+
+  </script>
+</body>
+
+</html>
